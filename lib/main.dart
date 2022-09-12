@@ -20,116 +20,119 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Layout App"),
         ),
-        body: Column(
-          children: [
-            // Expanded(
-            //   child: Container(
-            //     color: Colors.blue,
-            //     child: Row(
-            //       children: [
-            //         // colBox(),
-            //         // colBox2(),
-            //       ],
-            //     ),
-            //   ),
-            // ),
-            // Expanded(
-            //   child: Container(
-            //     color: Colors.pink,
-            //   ),
-            // ),
-            Container(
-              color: Colors.white,
-              child: Row(
-                children: [
-                  colBox(),
-                  colBox2(),
-                ],
-              ),
-            ),
-            // Expanded(
-            //   child: Container(
-            //     color: Colors.green,
-            //   ),
-            // ),
-            Container(
-              child: Row(
-                children: [
-                  image(),
-                ],
-              ),
-            ),
-            Container(
-              width: 400,
-              height: 50,
-              alignment: Alignment.center,
-              child: Text(
-                "Costa Mendekat Ke Palmeiras",
-                style: TextStyle(
-                  fontFamily: 'Arial',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              decoration: BoxDecoration(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
                 color: Colors.white,
-                border: Border.all(
-                  color: Colors.purple,
-                  width: 0,
+                child: Row(
+                  children: [
+                    colBox(),
+                    colBox2(),
+                  ],
                 ),
               ),
-            ),
-            Container(
-              width: 400,
-              height: 50,
-              alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 10),
-              child: Text(
-                "Transfer",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontFamily: 'Arial',
-                  fontWeight: FontWeight.w700,
+              Container(
+                child: Row(
+                  children: [
+                    image(),
+                  ],
                 ),
               ),
-              decoration: BoxDecoration(
-                color: Color.fromARGB(255, 217, 0, 255),
-                border: Border.all(
-                  color: Colors.purple,
-                  width: 0,
-                ),
-              ),
-            ),
-            Column(
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      yellBox3(),
-                      yellBox4(),
-                      // yellBox5(),
-                      // yellBox6(),
-                    ],
+              Container(
+                width: 400,
+                height: 50,
+                alignment: Alignment.center,
+                child: Text(
+                  "Costa Mendekat Ke Palmeiras",
+                  style: TextStyle(
+                    fontFamily: 'Arial',
+                    fontWeight: FontWeight.w700,
                   ),
-                )
-              ],
-            ),
-            textBarce(),
-            Column(
-              children: [
-                Container(
-                  child: Row(
-                    children: [
-                      // yellBox3(),
-                      // yellBox4(),
-                      yellBox5(),
-                      yellBox6(),
-                    ],
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 0,
                   ),
-                )
-              ],
-            ),
-            textBarce(),
-          ],
+                ),
+              ),
+              Container(
+                width: 400,
+                height: 50,
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.only(left: 10),
+                child: Text(
+                  "Transfer",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'Arial',
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 217, 0, 255),
+                  border: Border.all(
+                    color: Colors.purple,
+                    width: 0,
+                  ),
+                ),
+              ),
+              Column(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        yellBox3(),
+                        yellBox4(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              textBarce(),
+              Column(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        yellBox3(),
+                        yellBox4(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              textBarce(),
+              Column(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        yellBox3(),
+                        yellBox4(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              textBarce(),
+              Column(
+                children: [
+                  Container(
+                    child: Row(
+                      children: [
+                        yellBox3(),
+                        yellBox4(),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              textBarce(),
+            ],
+          ),
         ),
       ),
     );
@@ -301,66 +304,6 @@ class yellBox4 extends StatelessWidget {
       ),
       child: Text(
           "Pique Bilang Wasit Untungkan Real Madrid, Ronald Koeman Tepok Jidat"),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(
-          color: Colors.grey,
-          width: 1,
-        ),
-      ),
-    );
-  }
-}
-
-class yellBox5 extends StatelessWidget {
-  const yellBox5({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 160,
-      height: 90,
-      margin: EdgeInsets.only(
-        top: 10,
-      ),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: NetworkImage(
-            'https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt4e7969bade7a9838/60dae7ca2e95e10f21ee4d4d/90fc0bacd0091994ffd8736162d591e806c6658a.jpg',
-          ),
-        ),
-        color: Colors.white,
-        border: Border.all(
-          color: Colors.grey,
-          width: 1,
-        ),
-      ),
-    );
-  }
-}
-
-class yellBox6 extends StatelessWidget {
-  const yellBox6({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 200,
-      height: 90,
-      margin: EdgeInsets.only(
-        top: 10,
-      ),
-      alignment: Alignment.center,
-      padding: EdgeInsets.only(
-        left: 5,
-      ),
-      child: Text(
-        "Pique Bilang Wasit Untungkan Real Madrid, Ronald Koeman Tepok Jidat",
-      ),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
